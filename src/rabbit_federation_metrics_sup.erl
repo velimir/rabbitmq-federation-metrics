@@ -1,6 +1,6 @@
 -module(rabbit_federation_metrics_sup).
 
--behaviour(supervisor2).
+-behaviour(supervisor).
 
 -export([start_link/0, init/1]).
 
@@ -11,7 +11,7 @@ init([]) ->
     {ok, {{one_for_one, 3, 10},
           [{rabbit_federation_metrics_worker,
             {rabbit_federation_metrics_worker, start_link, []},
-            {permanent, 1000},
+            permanent,
             5000,
             worker,
             [rabbit_federation_metrics_worker]}

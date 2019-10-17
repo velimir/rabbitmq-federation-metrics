@@ -11,7 +11,7 @@
 -include_lib("rabbit_common/include/rabbit.hrl").
 
 start_link() ->
-    gen_server:start_link({global, ?MODULE}, ?MODULE, [], []).
+    gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
 
 %%---------------------------
 %% Gen Server Implementation
