@@ -72,7 +72,7 @@ local_links() ->
        end || {rabbit_federation_exchange, Resource} = G <- pg2:which_groups()]).
 
 schedule_print() ->
-    {ok, Interval} = application:get_env(rabbitmq_federation_metrics, iterval),
+    {ok, Interval} = application:get_env(rabbitmq_federation_metrics, interval),
     schedule_print(Interval).
 
 schedule_print(Interval) ->
