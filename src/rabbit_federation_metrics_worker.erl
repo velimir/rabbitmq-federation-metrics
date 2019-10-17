@@ -57,7 +57,7 @@ prit_metrics(Pid, VHost, Items) ->
     end.
 
 print_metrics(VHost, Info) ->
-    rabbit_log_federation_metrics:info("Federation metrics (~s): ~w", [VHost, Info]).
+    rabbit_log:info("Federation metrics (~s): ~w", [VHost, Info]).
 
 local_links() ->
     lists:flatten(
