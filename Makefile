@@ -1,4 +1,4 @@
-PROJECT = rabbit_federation_metrics
+PROJECT = rabbitmq_federation_metrics
 PROJECT_DESCRIPTION = Rabbit Federation metrics
 PROJECT_MOD = rabbit_federation_metrics
 PROJECT_VERSION = git

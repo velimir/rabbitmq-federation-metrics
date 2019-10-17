@@ -45,7 +45,7 @@ code_change(_OldVsn, State, _Extra) ->
 %%------------------
 print_metrics() ->
     Links  = local_links(),
-    {ok, Items} = application:get_env(rabbit_federation_metrics, items),
+    {ok, Items} = application:get_env(rabbitmq_federation_metrics, items),
     [prit_metrics(Pid, VHost, Items) || {Pid, VHost} <- Links].
 
 prit_metrics(Pid, VHost, Items) ->
@@ -72,7 +72,7 @@ local_links() ->
        end || {rabbit_federation_exchange, Resource} = G <- pg2:which_groups()]).
 
 schedule_print() ->
-    {ok, Interval} = application:get_env(rabbit_federation_metrics, iterval),
+    {ok, Interval} = application:get_env(rabbitmq_federation_metrics, iterval),
     schedule_print(Interval).
 
 schedule_print(Interval) ->
