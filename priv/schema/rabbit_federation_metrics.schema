@@ -1,0 +1,9 @@
+
+{mapping, "rabbit_federation_metrics.interval", "rabbit_federation_metrics.interval",
+    [{datatype, integer}]}.
+
+{translation, "rabbit_federation_metrics.interval",
+fun(Conf) ->
+    Iterval = cuttlefish:conf_get("rabbit_federation_metrics.interval", Conf),
+    list_to_integer(Exchange)
+end}.
