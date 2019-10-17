@@ -5,7 +5,8 @@ PROJECT_VERSION = git
 
 define PROJECT_ENV
 [
-	    {interval, 1000}
+	    {interval, 1000},
+	    {items, [message_queue_len]}
 	  ]
 endef
 
